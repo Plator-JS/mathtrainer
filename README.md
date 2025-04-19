@@ -1,1 +1,1 @@
-# mathtrainer
+# mathetrainer
