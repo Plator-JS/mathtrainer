@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const aufgabenContainer = document.getElementById("aufgabenContainer");
 
     function generiereAufgabe(id) {
-        let zahl1 = Math.floor(Math.random() * 20) + 1; // Zufallszahl zwischen 1 und 20
+        let zahl1 = Math.floor(Math.random() * 20) + 1; 
         let zahl2 = Math.floor(Math.random() * 20) + 1;
-        let richtigeAntwort = zahl1 * zahl2; // Multiplikationsaufgabe
+        let richtigeAntwort = zahl1 * zahl2;
 
         let aufgabeHTML = `
             <div>
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button onclick="prüfeAntwort(${id}, ${richtigeAntwort})">Prüfen</button>
                 <p id="ergebnis${id}"></p>
             </div>`;
-        aufgabenContainer.innerHTML += aufgabeHTML; // Aufgabe in den Container einfügen
+        aufgabenContainer.innerHTML += aufgabeHTML; 
     }
 
     function erstelleAufgaben(anzahl) {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    erstelleAufgaben(5); // 5 zufällige Aufgaben erstellen
+    erstelleAufgaben(5);
 });
 
 function prüfeAntwort(id, richtigeAntwort) {
