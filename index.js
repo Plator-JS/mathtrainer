@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 <input id="antwort${id}" type="text">
                 <button onclick="prüfeAntwort(${id}, ${richtigeAntwort})">Prüfen</button>
                 <p id="ergebnis${id}"></p>
-                <button id="reset"(${id})">Reset</button>
             </div>`;
         aufgabenContainer.innerHTML += aufgabeHTML; // Aufgabe in den Container einfügen
     }
@@ -38,13 +37,4 @@ function prüfeAntwort(id, richtigeAntwort) {
         ergebnis.textContent = `Falsch! Die richtige Antwort ist ${richtigeAntwort}.`;
         ergebnis.style.color = "red";
     }
-}
-
-//Funktoniert nicht!!!
-function reset() {
-    let eingabeFelder = document.querySelectorAll("input[type='text']");
-    let ergebnisFelder = document.querySelectorAll("#ergebnis");
-
-    eingabeFelder.forEach(feld => feld.value = ""); // Eingabefelder leeren
-    ergebnisFelder.forEach(feld => feld.textContent = ""); // Ergebnis zurücksetzen
 }
